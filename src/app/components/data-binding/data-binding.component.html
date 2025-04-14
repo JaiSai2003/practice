@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-9">
+        <h3>One Way Data Binding</h3>
+        <ul><li>One way data binding is used to bind the value of a property in the component to the UI.</li></ul>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>1. Interpolation</h3>
+                <ul><li>Interpolation is the simplest way to bind data to the UI. It is used to display the value of a variable in the template.</li></ul>
+                <p>FirstName = {{ firstName }}</p>
+                <p>RollNo = {{ rollNo }}</p>
+                <p>CurrentDate = {{ currentDate }}</p>
+            </div>
+            <div class="col-md-4">
+                <h3>2. Property Binding</h3>
+                <ul><li>Property binding is used to bind the value of a property in the component to the UI using the square brackets to the property name.</li></ul>
+                <input type="text" [value]="firstName">
+                <input type="text" [placeholder]="placeholder">
+                <div [className]="class" style="height: 100px; width: 100px;"></div>
+            </div>
+            <div class="col-md-4">
+                <h3>3. Event Binding</h3>
+                <ul><li>Event binding is used to bind the value of a property in the component to the UI.</li></ul>
+                <button (click)='callEvent("Click")'>Click Me</button><br>
+                <select name="" id="" (change)='callEvent("Change")' [value]="selectedValue">
+                    <option value="" disabled selected hidden>Select One</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h3>Two Way Data Binding</h3>
+        <ul><li> Two way data binding is used to bind the value of a property in the component to the UI and the UI the component.</li></ul>
+        <p><ul><li>The value of the property is updated in the component and the UI is updated automatically.</li></ul>
+        <input type="text" [(ngModel)]="firstName">
+        <select name="" id="" [(ngModel)]="selectedValue">
+            <option value="" disabled selected hidden>Select One</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+</div>
