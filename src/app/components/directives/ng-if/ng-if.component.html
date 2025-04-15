@@ -1,0 +1,26 @@
+
+<div class="row"> 
+    <h3>NgIf Directive</h3>
+    <div class="col-6">
+        <div class="bg-success p-3" *ngIf="div1">
+            Div 1
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="bg-primary p-3" *ngIf="val1 === val2">
+            Div 2
+        </div>
+    </div>
+</div>
+<div class="row pt-2">
+    <div class="col-6 text-center justify-content-between">
+        <p>Toggle the visibility of div 1</p>
+        <button class="btn btn-danger" (click)='toggleDiv1(false)'>hide</button>
+        <button class="btn btn-success" (click)='toggleDiv1(true)'>show</button>
+    </div>
+    <div class="col-6 text-center justify-content-between">
+        <p>Div 2 will be visiable only when both the input values are same</p>
+        <input type="text" [(ngModel)]="val1">
+        <input type="text" [(ngModel)]="val2">
+    </div>
+</div>
