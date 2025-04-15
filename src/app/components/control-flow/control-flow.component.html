@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-3">
+        @if(div1Visible == true){
+            <div class="bg-success P-3 text-center" style="height: 100%;">
+                Div 1
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        @if(div2Visible === true) {
+            <div class="bg-success P-3">
+                Checkbox is Checked
+            </div>
+        } @else{
+            <div class="bg-danger p-3">
+                Checkbox is Un-Checked
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        @if(dayName === "mon") {
+            <span> The day is Monday </span>
+        } @else if(dayName === "tues") {
+            <span> The day is Tuesday </span>
+        } @else if(dayName === "wednes") {
+            <span> The day is Wednesday </span>
+        } @else if(dayName === "thurs") {
+            <span> The day is Thursday </span>
+        } @else if(dayName === "fri") {
+            <span> The day is Friday </span>
+        } @else if(dayName === "satur") {
+            <span> The day is Saturday </span>
+        } @else if(dayName === "sun") {
+            <span> The day is Sunday </span>
+        } @else if(dayName === "" || dayName.length < 3) {
+            <span> please The input a day </span>
+        } @else {
+            <span> Not Found </span>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="toggleDiv1()">hide/show div 1</button>
+    </div>
+    <div class="col-3">
+        <input type="checkbox" name="div2Visible" id="div2Visible" [(ngModel)]="div2Visible">
+    </div>
+    <div class="col-3">
+        <input type="text" name="dayName" id="dayName" [(ngModel)]="dayName" maxlength="3">
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <h3> for loop</h3>
+    <div class="col-3">
+        <select name="" id="">
+            @for(city of cities; track $index) { 
+                <option>{{city}}</option>
+            }
+        </select>
+    </div>
+    <div class="col-3">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>SlNo</th>
+                    <th>Emp Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(emp of employee; track $index) {
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{emp.empId}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.age}}</td>
+                        <td>{{emp.address}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
