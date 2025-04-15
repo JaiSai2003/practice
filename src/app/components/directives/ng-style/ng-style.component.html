@@ -1,0 +1,27 @@
+<div class="row">
+    <h3>NgStyle Directive</h3>
+    <div class="col-3">
+        <div class=" p-4" [ngStyle]="{'background-color': div1Color,'color':'white'}">
+            Div 1
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="p-4" [ngStyle]="{'background-color': isChecked? 'white':'black','color':isChecked? 'black':'white'}">
+            Div 2
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="p-4" [ngStyle]="Styles">
+            Div 3
+        </div>
+    </div>
+</div>
+<div class="row pt-4">
+    <div class="col-3">
+        <button class="btn btn-success m-2" (click)='addDiv1Color("Green")'>Green</button>
+        <button class="btn btn-danger" (click)='addDiv1Color("Red")'>Red</button>
+    </div>
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isChecked"/>
+    </div>
+</div>

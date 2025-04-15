@@ -1,0 +1,28 @@
+<div class="row">
+    <h3>NgClass Directive</h3>
+    <div class="col-3">
+        <div class="bg-success p-3" [ngClass]="Div1BgColor">
+            Div 1
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-primary p-3" [ngClass]="{'bg-success': isChecked, 'bg-danger': !isChecked}">
+            Div 2
+        </div>
+    </div>
+    <div class="col-3" [ngClass]="div3ClassName">
+        Div 3
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 text-center justify-content-between">
+        <button class="btn btn-success" (click)='toggleDiv1BgColor("bg-success")'>Green</button>
+        <button class="btn btn-danger" (click)='toggleDiv1BgColor("bg-danger")'>Red</button>
+    </div>
+    <div class="col-3 text-center justify-content-between">
+        <input type="checkbox" [(ngModel)]="isChecked"/>
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="div3ClassName">
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="row">
+    <h3>NgFor Directive</h3>
+    <div class="col-6">
+        <ul>
+            <li *ngFor="let item of items">{{ item }}</li>
+        </ul>
+    </div>
+    <!-- <div class="col-6">
+        <button class="btn btn-success m-1" *ngFor="let item of items">{{ item }}</button>
+    </div> -->
+</div>
+<div class="row">
+    <div class="col-6">
+        <select name="empId" id="empId">
+            <option *ngFor="let item of employee" [value]="item.empId">{{ item.name }} - {{ item.address }}</option>
+        </select>
+    </div>
+    <div class="col-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>SlNo</th>
+                    <th>Emp Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of employee;let i = index">
+                    <td>{{ i+1 }}</td>
+                    <td>{{ item.empId }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.age }}</td>
+                    <td>{{ item.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
