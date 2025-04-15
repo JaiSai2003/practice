@@ -9,7 +9,7 @@ import { NgClassComponent } from '../ng-class/ng-class.component';
   imports: [NgIfComponent, NgforComponent, NgStyleComponent,NgClassComponent],
   template: `
   <div class="row table table-bordered">
-    <h1> Structural Directives</h1>
+    <h1> Structural Directives</h1> 
     <div class="col-6">
       <app-ng-if></app-ng-if>
     </div>
