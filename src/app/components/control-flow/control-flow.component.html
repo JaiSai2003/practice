@@ -53,8 +53,8 @@
 <br>
 <br>
 <div class="row">
-    <h3> for loop</h3>
     <div class="col-3">
+    <h3> For loop</h3>
         <select name="" id="">
             @for(city of cities; track $index) { 
                 <option>{{city}}</option>
@@ -84,5 +84,36 @@
                 }
             </tbody>
         </table>
+    </div>
+    <div class="col-3">
+        <h3>Switch Case</h3>
+        <select name="" id="">
+            @switch(dayName) {
+                @case("mon") {
+                    <option>Monday</option>
+                }
+                @case("tues") {
+                    <option>Tuesday</option>
+                }
+                @case("wednes") {
+                    <option>Wednesday</option>
+                }
+                @case("thurs") {
+                    <option>Thursday</option>
+                }
+                @case("fri") {
+                    <option>Friday</option>
+                }
+                @case("satur") {
+                    <option>Saturday</option>
+                }
+                @case("sun") {
+                    <option>Sunday</option>
+                }
+                @default {
+                    <option>Not Found</option>
+                }
+            }
+        </select>
     </div>
 </div>
