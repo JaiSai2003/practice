@@ -3,11 +3,13 @@ import { AdminComponent } from './components/admin/admin.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { DirectiveComponent } from './components/directives/directive/directive.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
+import { SignalsComponent } from './components/signals/signals.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home' , component: AdminComponent},
     {path: 'dataBinding' , component: DataBindingComponent},
     {path: 'directives' , component: DirectiveComponent},
-    {path: 'controlFlow' , component: ControlFlowComponent}
+    {path: 'controlFlow' , component: ControlFlowComponent},
+    {path: 'signals' , component: SignalsComponent},
 ];
